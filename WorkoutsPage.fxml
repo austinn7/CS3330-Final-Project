@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="375.0" prefWidth="500.0" style="-fx-background-color: lightblue; -fx-border-color: white; -fx-border-width: 2;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="amnd7dfitnesstracker.WorkoutsPageController">
+    <stylesheets>
+        <URL value="@workoutspage.css" />
+    </stylesheets>
+   <children>
+      <MenuBar layoutX="2.0" layoutY="1.0" prefHeight="25.0" prefWidth="500.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open" />
+               </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="workoutTableView" layoutX="29.0" layoutY="88.0" prefHeight="159.0" prefWidth="453.0" />
+      <Label layoutX="137.0" layoutY="48.0" text="Your Workout" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Serif Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="333.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleHomeButtonPressed" style="-fx-background-color: blue;" text="Home" textFill="WHITE" />
+      <Button layoutX="127.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleGoalsButtonPressed" style="-fx-background-color: blue;" text="Goals" textFill="WHITE" />
+      <TextField fx:id="workoutTextField" layoutX="56.0" layoutY="254.0" prefHeight="25.0" prefWidth="161.0" promptText="Enter Workout:" />
+      <TextField fx:id="setsTextField" layoutX="240.0" layoutY="254.0" prefHeight="10.0" prefWidth="69.0" promptText="Sets:" />
+      <TextField fx:id="repitionsTextField" layoutX="323.0" layoutY="254.0" prefHeight="3.0" prefWidth="69.0" promptText="Reps:" />
+      <Label layoutX="29.0" layoutY="282.0" text="Total Volume:" textFill="WHITE">
+         <font>
+            <Font name="Serif Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="282.0" text="Total Repititions:" textFill="WHITE">
+         <font>
+            <Font name="Serif Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="weightTextField" layoutX="405.0" layoutY="254.0" prefHeight="14.0" prefWidth="69.0" promptText="Weight:" />
+      <Text fx:id="totalVolumeText" fill="WHITE" layoutX="80.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER">
+         <font>
+            <Font name="Serif Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="totalRepititionsText" fill="WHITE" layoutX="409.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER">
+         <font>
+            <Font name="Serif Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="173.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleAddButtonPressed" style="-fx-background-color: blue;" text="Add" textFill="WHITE" />
+      <Button layoutX="220.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleRemoveButtonPressed" style="-fx-background-color: blue;" text="Remove" textFill="WHITE" />
+      <Button layoutX="287.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleClearButtonPressed" style="-fx-background-color: blue;" text="Clear" textFill="WHITE" />
+   </children>
+</AnchorPane>

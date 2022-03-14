@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="500.0" style="-fx-background-color: lightblue; -fx-border-color: white; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="amnd7dfitnesstracker.HomePageController">
+   <children>
+      <Button fx:id="workoutsButton" layoutX="146.0" layoutY="331.0" mnemonicParsing="false" onAction="#handleWorkoutsButtonPressed" style="-fx-background-color: blue;" text="Workouts" textFill="WHITE" />
+      <Button fx:id="goalsButton" layoutX="296.0" layoutY="331.0" mnemonicParsing="false" onAction="#handleGoalsButtonPressed" style="-fx-background-color: blue;" text="Goals" textFill="WHITE" />
+      <Button fx:id="aboutAppButton" layoutX="64.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleAboutAppButtonPressed" prefWidth="150.0" style="-fx-background-color: grey;" text="About the App" textFill="WHITE" />
+      <Button fx:id="aboutDeveloperButton" layoutX="284.0" layoutY="75.0" mnemonicParsing="false" onAction="#handleAboutDeveloperButtonPressed" prefWidth="150.0" style="-fx-background-color: gray;" text="About the Developer" textFill="WHITE" />
+      <ImageView fitHeight="188.0" fitWidth="282.0" layoutX="108.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@David%20Goggins.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="54.0" layoutY="14.0" text="Diet And Fitness Tracker" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Serif Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
